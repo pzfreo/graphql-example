@@ -1,0 +1,25 @@
+{
+  "name": "graphql-example",
+  "version": "1.0.0",
+  "description": "Simple example graphql project for SOA course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pzfreo/graphql-example.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pzfreo/graphql-example/issues"
+  },
+  "homepage": "https://github.com/pzfreo/graphql-example#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-graphql": "^0.9.0",
+    "graphql": "^14.5.8",
+    "mongo": "^0.1.0"
+  }
+}
