@@ -1,4 +1,4 @@
-const express = require('express');
+  const express = require('express');
 const graphqlHTTP = require('express-graphql');
 const { buildSchema } = require('graphql');
 const { MongoClient } = require('mongodb');
@@ -47,7 +47,13 @@ const schema = buildSchema(`
 const resolvers = {
   bios: (args, context) =>context().then(db => db.collection('bios').find().toArray()),
   bio: (args, context) =>context().then(db => db.collection('bios').findOne({ _id: args.id })),
-  addBio: (args, context) => context().then(db => db.collection('bios').insertOne({ name: args.input.name, title: args.input.title, death: args.input.death, birth: args.input.birth})).then(response => response.ops[0])
+  addBio: (args, context) => context()
+    .then(db => db.collection('bios').insertOne(
+        { name: args.input.name, 
+          title: args.input.title, 
+          death: args.input.death, 
+          birth: args.input.birth}))
+    .then(response => response.ops[0])
 };
 
 const app = express();
